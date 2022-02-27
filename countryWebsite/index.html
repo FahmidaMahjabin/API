@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Country Website</title>
+    <style>
+        .country{
+            background-color: skyblue;
+            border: 2px solid blue;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .flagImg{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "text-3xl font-semibold text-green-500 text-center m-4">Country Website</h1>
+    <div class = "text-center">
+        <input placeholder="enter country name" class = "border border-red-500 p-2">
+        <button type = "button" class = "bg-red-900 p-2">Search</button>
+    </div>
+    <!-- show countries -->
+    <div id = "countries" class = "grid grid-cols-3 gap-4 m-8">
+        
+    </div>
+    <script src = "countryWeb.js"></script>
+</body>
+</html>
