@@ -17,14 +17,27 @@
             width: 100%;
             height: auto;
         }
+        #searchedCountry{
+            width: 50%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+
+        }
+        #alert{
+            display: none;
+        }
     </style>
 </head>
 <body>
     <h1 class = "text-3xl font-semibold text-green-500 text-center m-4">Country Website</h1>
     <div class = "text-center">
-        <input placeholder="enter country name" class = "border border-red-500 p-2">
-        <button type = "button" class = "bg-red-900 p-2">Search</button>
+        <input placeholder="enter country name" id = "input" class = "border border-red-500 p-2">
+        <button type = "button" class = "bg-red-900 p-2 text-white" onclick="showSearchedCountry()" >Search</button>
     </div>
+    <div id = "alert" class = "bg-red-400 p-4 m-4 rounded">Please enter valid country name</div>
+    <div id = "searchedCountry"></div>
     <!-- show countries -->
     <div id = "countries" class = "grid grid-cols-3 gap-4 m-8">
         
