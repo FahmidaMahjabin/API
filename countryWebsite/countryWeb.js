@@ -19,14 +19,20 @@ function getCountries(countries){
         document.getElementById("countries").appendChild(oneCountry);
     }
 }
-
+// function get currency 
+const getCurrency = country => {
+    const currencies = country.currencies;
+    for(let property in currencies){
+        return currencies[property].name;
+    }   
+}
 function makeOneCountry(country){
     const mainDiv = document.createElement("div");
     mainDiv.classList.add("country")
     mainDiv.innerHTML = `<h1 class = "text-3xl text-center font-semibold">${country.name.official}</h1>
     <img class = "flagImg" src = ${country.flags.svg}>
     <p class = "font-semibold">Capital: ${country.capital[0]}</p>
-    <p class = "font-semibold">Currencies:country.currencies.EUR.name</p>
+    <p class = "font-semibold">Currencies:${getCurrency(country)}</p>
     <p class = "font-semibold">Population: ${country.population}</p>
     <p class = "font-semibold">Area: ${country.area}</P>
     <a type= "button" class = "bg-slate-800 text-white rounded p-2 m-2" href = "${country.maps.googleMaps}" target = "_blank">see location</a>
