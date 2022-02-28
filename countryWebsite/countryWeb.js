@@ -4,7 +4,11 @@
 function showCountries(){
     const countryWebSite = fetch("https://restcountries.com/v3.1/currency/euro")
     .then(response => response.json())
-    .then(countries => getCountries(countries) )
+    .then(countries =>{
+        document.getElementById("loader").style.display = "none";
+        getCountries(countries)
+
+    })
 
 }
 showCountries()
@@ -54,6 +58,8 @@ function showSearchedCountry(){
     .then(response => response.json());
     console.log(countryURL)
     countryURL.then(countries=> {
+        // hide all countries
+        document.getElementById("countries").style.display = "none";
         country = countries[0];
         console.log("searched one country:", country)
         const searchedCountry = makeOneCountry(country);
